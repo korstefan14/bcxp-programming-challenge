@@ -2,7 +2,10 @@ package de.bcxp.challenge.dataAccessors;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.io.FileNotFoundException;
+
 import org.junit.jupiter.api.Test;
+
 
 public interface DataAccessorContract {
 
@@ -17,14 +20,15 @@ public interface DataAccessorContract {
         // when
         assertThrows(NullPointerException.class, ()->dataAccessor.access(location));
     }
+    
     @Test
-    default void shouldThrowIllegalArgumentExceptionWhenLocationIsNotCSV() {
+    default void shouldThrowFileNotFoundExceptionWhenGivenFileDoesntExist() {
         // given
-        String location = "someLocation";
+        String location = "nonexistent";
         DataAccessor dataAccessor = createInstance();
 
         // when
-        assertThrows(IllegalArgumentException.class, ()->dataAccessor.access(location));
+        assertThrows(FileNotFoundException.class, ()->dataAccessor.access(location));
     }
-    
+
 }
