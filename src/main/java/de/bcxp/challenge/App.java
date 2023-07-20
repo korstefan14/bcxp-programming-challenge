@@ -27,10 +27,16 @@ public class App {
             System.out.printf("Day with smallest temperature spread: %d%n", dayWithSmallestTempSpread);
         } catch (IOException | CsvException | RuntimeException e) {
             System.out.printf("Fehler: %s%n", e.getMessage());
-            // e.printStackTrace();
+             e.printStackTrace();
         }
 
-        String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
-        System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity);
+        String countryWithHighestPopulationDensity;
+        try {
+            countryWithHighestPopulationDensity = new CountriesHandler().handle();
+            System.out.printf("Country with highest Population Density: %s%n", countryWithHighestPopulationDensity);
+        } catch (IOException | CsvException | RuntimeException e) {
+            System.out.printf("Fehler: %s%n", e.getMessage());
+             e.printStackTrace();
+        }
     }
 }

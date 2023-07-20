@@ -42,7 +42,7 @@ public class ReducedWeatherInformation {
 
     @Override
     public String toString() {
-        return "ReducedWeatherInformation [Day=" + Day + ", MxT=" + MxT + ", MnT=" + MnT + "]";
+        return "ReducedWeatherInformation [Day=" + Day + ", MxT=" + MxT + ", MnT=" + MnT + "]\n";
     }
 
 }

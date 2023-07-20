@@ -1,5 +1,6 @@
 package de.bcxp.challenge.dataParsers;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
 

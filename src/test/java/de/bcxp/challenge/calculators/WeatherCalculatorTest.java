@@ -40,7 +40,7 @@ public class WeatherCalculatorTest {
     }
 
     @Test
-    public void givenListWithMoreThanOneElement_whenCalculateDayWithSmallestTemperatureSpread_thenReturnTheFirstArgumentsDay() {
+    public void givenListWithMoreThanOneElement_whenCalculateDayWithSmallestTemperatureSpread_thenReturnTheCorrectDay() {
         ArrayList<ReducedWeatherInformation> list = new ArrayList<ReducedWeatherInformation>();
         list.add(new ReducedWeatherInformationBuilder().withDay(1).withMnT(5).withMxT(13).build());
         list.add(new ReducedWeatherInformationBuilder().withDay(2).withMnT(6).withMxT(8).build());
