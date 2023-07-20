@@ -15,14 +15,14 @@ import com.opencsv.exceptions.CsvException;
 
 import de.bcxp.challenge.dataReaders.LocalFileReaderFactory;
 import de.bcxp.challenge.models.ReducedCountry;
-import de.bcxp.challenge.models.ReducedWeatherInformation;
 
-public class CountryParserTest implements CSVBeanDataParserContract{
+public class CountryParserTest implements CSVBeanDataParserContract {
 
     @Override
     public CSVBeanDataParser getInstance() {
         try {
-            return new CountryDataParser(new LocalFileReaderFactory().acquireReader("src/test/resources/countries.csv"));
+            return new CountryDataParser(
+                    new LocalFileReaderFactory().acquireReader("src/test/resources/countries.csv"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -71,5 +71,5 @@ public class CountryParserTest implements CSVBeanDataParserContract{
         assertTrue(list instanceof java.util.List);
         assertEquals(0, list.size());
     }
-    
+
 }

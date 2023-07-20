@@ -3,20 +3,20 @@ package de.bcxp.challenge.models;
 import java.beans.JavaBean;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvNumber;
 
 /**
- * This class is used to build ReducedCountry objects for testing purposes. I got the idea from http://www.natpryce.com/articles/000714.html 
+ * This class is used to build ReducedCountry objects for testing purposes. I
+ * got the idea from http://www.natpryce.com/articles/000714.html
  * (Although obviously the builder pattern is nothing new)
  */
 @JavaBean
 public class ReducedCountry {
-     @CsvBindByName(column = "Name")
+    @CsvBindByName(column = "Name")
     private String name;
 
-    @CsvBindByName(column = "Population",locale = "en-US", capture = "([^,]+),.*")
+    @CsvBindByName(column = "Population", locale = "en-US", capture = "([^,]+),.*")
     private int population;
-    
+
     @CsvBindByName(column = "Area (km\u00B2)")
     private int area;
 
@@ -48,7 +48,5 @@ public class ReducedCountry {
     public String toString() {
         return "ReducedCountry [name=" + name + ", population=" + population + ", area=" + area + "]\n";
     }
-    
 
-    
 }

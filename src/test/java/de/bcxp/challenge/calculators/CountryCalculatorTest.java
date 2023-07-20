@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import de.bcxp.challenge.models.ReducedCountry;
 import de.bcxp.challenge.models.ReducedCountryBuilder;
 
-
 public class CountryCalculatorTest {
     private static CountryCalculator countryCalculator;
 
@@ -35,7 +34,7 @@ public class CountryCalculatorTest {
     @Test
     public void givenListWithOneElement_whenFindCountryWithHighestPopulationDensity_thenReturnTheFirstArgumentsDay() {
         ArrayList<ReducedCountry> list = new ArrayList<ReducedCountry>();
-        list.add(new ReducedCountryBuilder().build()); 
+        list.add(new ReducedCountryBuilder().build());
         assertEquals("TestCountry", countryCalculator.findCountryWithHighestPopulationDensity(list));
 
     }
@@ -44,7 +43,7 @@ public class CountryCalculatorTest {
     public void givenListWithMoreThanOneElement_whenFindCountryWithHighestPopulationDensity_thenReturnTheCorrectCountry() {
         ArrayList<ReducedCountry> list = new ArrayList<ReducedCountry>();
         list.add(new ReducedCountryBuilder().withName("Albanien").withArea(5).withPopulation(140).build());
-        list.add(new ReducedCountryBuilder().withName("Belgien").withArea(6).withPopulation(20).build()); 
+        list.add(new ReducedCountryBuilder().withName("Belgien").withArea(6).withPopulation(20).build());
         list.add(new ReducedCountryBuilder().withName("China").withArea(7).withPopulation(300000).build());
         list.add(new ReducedCountryBuilder().withName("Dänemark").withArea(8).withPopulation(300002).build());
         assertEquals("China", countryCalculator.findCountryWithHighestPopulationDensity(list));

@@ -1,7 +1,5 @@
 package de.bcxp.challenge.models;
 
-import java.math.BigDecimal;
-
 public class ReducedCountryBuilder {
     String name = "TestCountry";
     int area = 5;

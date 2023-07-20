@@ -13,6 +13,7 @@ public class CountriesHandler {
 
     /**
      * A handy Shortcut for calling the Countries Challenge
+     * 
      * @return The country with the largest population density
      * @throws IOException
      * @throws CsvException
@@ -24,5 +25,5 @@ public class CountriesHandler {
                 .access());
 
     }
-    
+
 }
