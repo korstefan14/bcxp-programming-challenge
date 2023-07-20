@@ -12,25 +12,25 @@ public interface ReaderFactoryTest {
 
     ReaderFactory getInstance();
 
-
-
     @BeforeEach
-    default void setUp(){
+    default void setUp() {
 
     }
-    
+
     @Test
     default void givenNullLocation_whenAcquireReader_thenThrowNullPointerException() {
         assertThrows(NullPointerException.class, () -> {
             getInstance().acquireReader(null);
         });
     }
+
     @Test
     default void givenNonExistingLocation_whenAcquireReader_thenThrowFileNotFoundException() {
         assertThrows(FileNotFoundException.class, () -> {
             getInstance().acquireReader("nonExistingLocation");
         });
     }
+
     @Test
     default void givenExistingLocation_whenAcquireReader_thenNoException() {
         assertDoesNotThrow(() -> {

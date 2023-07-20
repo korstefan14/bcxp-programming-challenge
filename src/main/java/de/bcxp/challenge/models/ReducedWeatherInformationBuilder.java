@@ -27,5 +27,5 @@ public class ReducedWeatherInformationBuilder {
         reducedWeatherInformation.setMxT(MxT);
         return reducedWeatherInformation;
     }
-    
+
 }

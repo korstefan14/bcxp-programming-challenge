@@ -2,8 +2,6 @@ package de.bcxp.challenge.dataParsers;
 
 import com.opencsv.bean.BeanVerifier;
 import com.opencsv.exceptions.CsvConstraintViolationException;
-import com.opencsv.exceptions.CsvValidationException;
-import com.opencsv.validators.LineValidator;
 
 import de.bcxp.challenge.models.ReducedWeatherInformation;
 

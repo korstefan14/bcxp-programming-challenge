@@ -21,19 +21,24 @@ public class WeatherCalculatorTest {
 
     @Test
     public void givenNull_whenCalculateDayWithSmallestTemperatureSpread_thenThrowNullPointerException() {
-        assertThrows(NullPointerException.class, ()->weatherCalculator.calculateDayWithSmallestTemperatureSpread(null));
+        assertThrows(NullPointerException.class,
+                () -> weatherCalculator.calculateDayWithSmallestTemperatureSpread(null));
     }
+
     @Test
     public void givenEmptyList_whenCalculateDayWithSmallestTemperatureSpread_thenThrowIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, ()->weatherCalculator.calculateDayWithSmallestTemperatureSpread(new ArrayList<ReducedWeatherInformation>()));
+        assertThrows(IllegalArgumentException.class, () -> weatherCalculator
+                .calculateDayWithSmallestTemperatureSpread(new ArrayList<ReducedWeatherInformation>()));
     }
+
     @Test
     public void givenListWithOneElement_whenCalculateDayWithSmallestTemperatureSpread_thenReturnTheFirstArgumentsDay() {
         ArrayList<ReducedWeatherInformation> list = new ArrayList<ReducedWeatherInformation>();
         list.add(new ReducedWeatherInformationBuilder().build());
-        assertEquals(1,weatherCalculator.calculateDayWithSmallestTemperatureSpread(list));
-        
+        assertEquals(1, weatherCalculator.calculateDayWithSmallestTemperatureSpread(list));
+
     }
+
     @Test
     public void givenListWithMoreThanOneElement_whenCalculateDayWithSmallestTemperatureSpread_thenReturnTheFirstArgumentsDay() {
         ArrayList<ReducedWeatherInformation> list = new ArrayList<ReducedWeatherInformation>();
@@ -41,8 +46,7 @@ public class WeatherCalculatorTest {
         list.add(new ReducedWeatherInformationBuilder().withDay(2).withMnT(6).withMxT(8).build());
         list.add(new ReducedWeatherInformationBuilder().withDay(3).withMnT(7).withMxT(10).build());
         list.add(new ReducedWeatherInformationBuilder().withDay(4).withMnT(8).withMxT(11).build());
-        assertEquals(2,weatherCalculator.calculateDayWithSmallestTemperatureSpread(list));
-        
-        
+        assertEquals(2, weatherCalculator.calculateDayWithSmallestTemperatureSpread(list));
+
     }
 }
