@@ -14,7 +14,7 @@ public class ReducedCountry {
     @CsvBindByName(column = "Name")
     private String name;
 
-    @CsvBindByName(column = "Population", locale = "en-US", capture = "([^,]+),.*")
+    @CsvBindByName(column = "Population", locale = "de-DE")
     private int population;
 
     @CsvBindByName(column = "Area (km\u00B2)")
