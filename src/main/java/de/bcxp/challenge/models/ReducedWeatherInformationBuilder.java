@@ -1,5 +1,10 @@
 package de.bcxp.challenge.models;
 
+
+/**
+ * This class is used to build ReducedWeatherInformation objects for testing purposes. I got the idea from http://www.natpryce.com/articles/000714.html 
+ * (Although obviously the builder pattern is nothing new)
+ */
 public class ReducedWeatherInformationBuilder {
     int day = 1;
     int MnT = 1;

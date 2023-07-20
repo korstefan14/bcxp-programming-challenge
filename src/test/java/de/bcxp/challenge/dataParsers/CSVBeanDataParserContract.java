@@ -3,7 +3,9 @@ package de.bcxp.challenge.dataParsers;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
-
+/**
+ * See DataParserContract
+ */
 public interface CSVBeanDataParserContract extends DataParserContract {
     CSVBeanDataParser getInstance();
 

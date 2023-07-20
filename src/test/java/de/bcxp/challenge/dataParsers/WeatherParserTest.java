@@ -16,6 +16,11 @@ import com.opencsv.exceptions.CsvException;
 import de.bcxp.challenge.dataReaders.LocalFileReaderFactory;
 import de.bcxp.challenge.models.ReducedWeatherInformation;
 
+/**
+ * This class tests the WeatherDataParser
+ * It receives some tests from CSVBeanDataParserContract and DataParserContract
+ */
+ 
 public class WeatherParserTest implements CSVBeanDataParserContract {
 
     @Override

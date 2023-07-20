@@ -5,6 +5,10 @@ import java.util.List;
 import de.bcxp.challenge.models.ReducedWeatherInformation;
 
 public class WeatherCalculator {
+    /**
+     * @param info The list of weather information from which the day with the smallest temperature spread should be calculated
+     * @return The day with the smallest temperature spread
+     */
     public int calculateDayWithSmallestTemperatureSpread(List<ReducedWeatherInformation> info) {
         if (info == null) {
             throw new NullPointerException("Liste darf nicht null sein");

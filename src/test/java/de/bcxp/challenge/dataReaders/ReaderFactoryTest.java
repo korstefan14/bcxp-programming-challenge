@@ -7,8 +7,11 @@ import java.io.FileNotFoundException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-public interface ReaderFactoryTest {
+/**
+ * This defines the reader factory contract
+ * Please note that this interface passes its tests down to LocalFileReaderFactory , allowing for a form of contract testing natively in JUnit5
+*/
+ public interface ReaderFactoryTest {
 
     ReaderFactory getInstance();
 
